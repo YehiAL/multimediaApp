@@ -4,7 +4,10 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
@@ -38,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/"+R.raw.personaspecialistvideo);
                 videoView.setVideoURI(videoUri);
                 videoView.start();
+            }
+        });
+
+        Button animarButton = findViewById(R.id.playAnimButton);
+        final ImageView imageView = findViewById(R.id.imageVIew);
+        animarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fade_in);
+                imageView.startAnimation(fadeInAnimation);
             }
         });
     }

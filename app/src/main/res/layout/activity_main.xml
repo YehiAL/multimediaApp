@@ -22,8 +22,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="260dp"
         android:layout_marginBottom="108dp"
-        android:text="Reproducir"
+        android:text="Audio"
         android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/playAnimButton"
+        android:layout_width="114dp"
+        android:layout_height="69dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="51dp"
+        android:text="animacion"
+        android:textColor="@color/white" />
 
     <VideoView
         android:id="@+id/videoView"
@@ -41,7 +52,7 @@
         android:layout_marginStart="250dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="113dp"
-        android:text="Reproducir video"/>
+        android:text="video"/>
 </RelativeLayout>
 
 
